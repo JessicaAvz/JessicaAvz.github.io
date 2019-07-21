@@ -21,9 +21,6 @@
     -o-transform: rotate(90deg);
     transform: rotate(90deg); }
 
-.navbar button {
-  border-radius: 50%; }
-
 .excerpt {
   background: #429EA6;
   /* fallback for old browsers */
@@ -34,16 +31,11 @@
   padding-top: 6rem;
   padding-bottom: 8rem;
   color: #FCFAFA; }
+  .excerpt a {
+    color: #252934; }
   .excerpt img {
     max-width: 20rem;
     border-radius: 50%; }
-
-.about {
-  background: #FCFAFA;
-  margin-top: 5rem;
-  padding-top: 3rem;
-  padding-bottom: 8rem;
-  color: #FA7268; }
 
 .skills {
   margin-top: -3rem; }
@@ -69,8 +61,138 @@
     font-size: 4rem;
     margin-bottom: 2rem; }
 
+.about {
+  margin-top: 5rem;
+  padding-top: 3rem;
+  background: #429EA6;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #429EA6, #7ec6cc);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #429EA6, #7ec6cc);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
+  .about .column {
+    padding: 3rem;
+    text-align: center; }
+    .about .column .circle-wrap {
+      background: #FCFAFA;
+      padding: 2rem;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%; }
+      .about .column .circle-wrap .about-icons {
+        color: #429EA6;
+        font-size: 5rem; }
+    .about .column .subtitle {
+      margin-top: 15px;
+      color: #FCFAFA;
+      font-weight: bold; }
+    .about .column .description {
+      color: #FCFAFA; }
+
+.portfolio {
+  margin-top: 4rem;
+  padding-top: 3rem; }
+  .portfolio .project-grid {
+    padding: 2rem 0 4rem; }
+  @media screen and (min-width: 769px) {
+    .portfolio .projects .project-grid {
+      padding-top: 4rem; } }
+  .portfolio .project-grid figure {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px; }
+    .portfolio .project-grid figure .detoxtorehab {
+      background: #29aae1;
+      /* fallback for old browsers */
+      background: -webkit-linear-gradient(to right, #6cc5ea, #29aae1);
+      /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to right, #6cc5ea, #29aae1);
+      /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
+    .portfolio .project-grid figure .tesselar {
+      background: #90d2c7;
+      /* fallback for old browsers */
+      background: -webkit-linear-gradient(to right, #c6e8e2, #59BCAB);
+      /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to right, #c6e8e2, #59BCAB);
+      /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
+    .portfolio .project-grid figure .findrehabcenters,
+    .portfolio .project-grid figure .methadonenearme,
+    .portfolio .project-grid figure .abtrs,
+    .portfolio .project-grid figure .pregnancyhealth {
+      background: #E0E0E0;
+      /* fallback for old browsers */
+      background: -webkit-linear-gradient(to right, #EEEEEE, #E0E0E0);
+      /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to right, #EEEEEE, #E0E0E0);
+      /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
+    .portfolio .project-grid figure .familyattorneys {
+      background: #f7c220;
+      /* fallback for old browsers */
+      background: -webkit-linear-gradient(to right, #fad66a, #f7c220);
+      /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to right, #fad66a, #f7c220);
+      /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
+    .portfolio .project-grid figure img.project-thumb {
+      padding: 4rem;
+      -webkit-transform: scale(1);
+      transform: scale(1);
+      -webkit-transition: .25s ease-in-out;
+      transition: 0.25s ease-in-out; }
+    .portfolio .project-grid figure figcaption {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0rem 3rem;
+      color: #fff;
+      z-index: 1; }
+      .portfolio .project-grid figure figcaption .tags {
+        margin: 0 auto 0.6rem; }
+        .portfolio .project-grid figure figcaption .tags span.tag {
+          font-weight: 600; }
+      .portfolio .project-grid figure figcaption h1.title {
+        color: #fff;
+        margin-bottom: 1.8rem;
+        font-weight: 500; }
+      .portfolio .project-grid figure figcaption a.button.is-primary.is-outlined.is-rounded {
+        margin: 0 auto;
+        font-size: 18px;
+        padding: 1.2rem;
+        font-weight: 400;
+        border-width: 2px;
+        color: #fff; }
+        .portfolio .project-grid figure figcaption a.button.is-primary.is-outlined.is-rounded span.icon {
+          margin-top: 4px;
+          margin-left: 0px; }
+          .portfolio .project-grid figure figcaption a.button.is-primary.is-outlined.is-rounded span.icon svg {
+            width: 8px; }
+  .portfolio .project-grid .overlay,
+  .portfolio .project-grid figcaption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    -webkit-transition: .45s ease-in-out;
+    transition: 0.45s ease-in-out; }
+  .portfolio .project-grid .overlay {
+    background-color: #293347; }
+  .portfolio .project-grid figure:hover img {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1); }
+  .portfolio .project-grid figure:hover .overlay,
+  .portfolio .project-grid figure:hover figcaption {
+    opacity: 1; }
+  @media screen and (min-width: 769px) {
+    .portfolio .project-grid figure figcaption {
+      padding: 0rem 2rem; } }
+
 footer {
-  background: #252934; }
+  background: #252934;
+  margin-top: 4rem;
+  padding-top: 3rem; }
+  footer p {
+    color: #FA7268; }
   footer .logo-icon {
     margin-top: 2rem;
     margin-bottom: 3rem; }
@@ -78,6 +200,15 @@ footer {
       width: 3rem; }
   footer .social-icons {
     margin-bottom: 3rem; }
+    footer .social-icons .button {
+      border: 0;
+      background-image: linear-gradient(to right, #FA7268, #FA7268 50%, transparent 50%, transparent);
+      background-position: 100% 0;
+      background-size: 200% 100%;
+      transition: all .2s ease-in; }
+      footer .social-icons .button:hover {
+        color: #FCFAFA;
+        background-position: 0 0; }
   footer .footer-bulma-logo {
     width: 12rem; }
 
