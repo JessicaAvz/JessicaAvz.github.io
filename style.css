@@ -202,7 +202,7 @@ footer {
     margin-bottom: 3rem; }
     footer .social-icons .button {
       border: 0;
-      margin-right: 1rem;
+      margin-right: 1rem !important;
       background-image: linear-gradient(to right, #FA7268, #FA7268 50%, transparent 50%, transparent);
       background-position: 100% 0;
       background-size: 200% 100%;
