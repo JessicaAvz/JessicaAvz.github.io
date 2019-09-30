@@ -1,4 +1,6 @@
 $(document).ready(function () {
+    var value = document.getElementById('itemDropdown').value;
+    alert(value);
 
     $('.dropdown-menu a').click(function () {
         $('#selectedOption').text($(this).text())
