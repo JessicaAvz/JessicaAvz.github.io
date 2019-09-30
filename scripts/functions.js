@@ -15,8 +15,8 @@ $(document).ready(function () {
         console.log(cryptoValue + " Price: "+ elementsArray[0].quote.USD.price);
 
         $('#cryptoCoin').text(cryptoValue);
-        $('#cryptoCoinMarketCap').text("Market Cap: " + elementsArray[0].quote.USD.market_cap);
-        $('#cryptoCoinPrice').text("Price: " + elementsArray[0].quote.USD.price);
+        $('#cryptoCoinMarketCap').text(elementsArray[0].quote.USD.market_cap);
+        $('#cryptoCoinPrice').text(elementsArray[0].quote.USD.price);
     });
 
 

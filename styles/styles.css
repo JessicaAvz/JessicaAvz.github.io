@@ -37,6 +37,9 @@ body {
 .env-task-section-main .env-task-prompt {
   font-size: 10pt;
 }
+.env-task-section-main .env-task-title {
+  font-weight: 700;
+}
 .env-task-section-main .env-task-label-time {
   font-weight: 700;
 }
