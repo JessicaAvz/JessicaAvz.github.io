@@ -1,8 +1,14 @@
+var x1;
+
 $(document).ready(function () {
     $('.dropdown-menu a').click(function () {
         var cryptoValue = $(this).text();
         $('#selectedOption').text(cryptoValue)
-        console.log(cryptoValue);
+        
+        x1.data.filter(function (element) {
+            return element.name == cryptoValue.text;
+        })
+        
     });
 
     $('#setNewMinutesButton').click(function () {
@@ -17,12 +23,7 @@ var apikey = {
 
 request('GET', 'https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest?CMC_PRO_API_KEY=' + apikey.key)
     .then((r1) => {
-        var x1 = JSON.parse(r1.target.responseText);
-
-        var elementsArray = x1.data.filter(function (element) {
-            return element.name == $('#selectedOption').text
-        })
-        
+        x1 = JSON.parse(r1.target.responseText);
         console.log("Bitcoin Market Cap " + x1.data[0].quote.USD.market_cap);
 
     }).catch(err => {
