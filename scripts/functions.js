@@ -2,7 +2,7 @@ var x1;
 
 $(document).ready(function () {
     $('.dropdown-menu a').click(function () {
-        cryptoValue = $(this).text();
+        var cryptoValue = $(this).text();
         $('#selectedOption').text(cryptoValue)
         console.log(cryptoValue);
 
