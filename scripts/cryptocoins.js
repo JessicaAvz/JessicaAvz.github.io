@@ -6,6 +6,10 @@ request('GET', 'https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/lat
     .then((r1) => {
         var x1 = JSON.parse(r1.target.responseText);
         console.log(x1.data[0].quote.USD.market_cap);
+
+        x1.data.filter(function(element) {
+            return element.id == $('#selectedOption').text
+        })
     }).catch(err => {
         console.log(err);
     })
