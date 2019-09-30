@@ -21,8 +21,7 @@ request('GET', 'https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/lat
         x1.data.filter(function (element) {
             return element.name == $('#selectedOption').text
         })
-        console.l
-        og(x1.data[0].quote.USD.market_cap);
+        console.log(x1.data[0].quote.USD.market_cap);
 
     }).catch(err => {
         console.log(err);
