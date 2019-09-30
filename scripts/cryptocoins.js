@@ -2,7 +2,7 @@ var apikey = {
     key: '919f2ec1-37e0-42d6-8e68-0625941de8ca'
 }
 
-request('GET', 'https://pro-api.coinmarketcap.com/v1/global-metrics/quotes/latest?CMC_PRO_API_KEY=' + apikey.key)
+request('GET', ' https://pro-api.coinmarketcap.com/v1/cryptocurrency/map?CMC_PRO_API_KEY=' + apikey.key)
     .then((r1) => {
         var x1 = JSON.parse(r1.target.responseText);
         console.log("Bitcoin" + x1.data.quote.BTC .total_market_cap);
