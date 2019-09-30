@@ -10,9 +10,9 @@ $(document).ready(function () {
             return element.name == cryptoValue;
         })
 
-        console.log(elementsArray)
-        console.log(cryptoValue + " Market cap: "+ elementsArray.quote.USD.market_cap);
-        console.log(cryptoValue + " Price: "+ elementsArray.quote.USD.price);
+        console.log(elementsArray);
+        console.log(cryptoValue + " Market cap: "+ elementsArray[cryptoValue].quote.USD.market_cap);
+        console.log(cryptoValue + " Price: "+ elementsArray[cryptoValue].quote.USD.price);
 
     });
 
