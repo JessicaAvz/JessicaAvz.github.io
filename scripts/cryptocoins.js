@@ -8,7 +8,7 @@ request('GET', 'https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/lat
         console.log(x1.data[0].quote.USD.market_cap);
 
         x1.data.filter(function(element) {
-            return element.id == $('#selectedOption').text
+            return element.id == picker.text
         })
     }).catch(err => {
         console.log(err);
