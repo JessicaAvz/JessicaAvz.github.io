@@ -10,8 +10,6 @@ $(document).ready(function () {
     $('.dropdown-menu a').click(function () {
         var cryptoValue = $(this).text();
         $('#selectedOption').text(cryptoValue)
-        console.log(cryptoValue);
-
         doCalculus();
     });
 
@@ -24,6 +22,23 @@ $(document).ready(function () {
         $("#minutesForRefreshing").text(newMinutes)
     });
 });
+
+
+function doCalculus() {
+    var elementsArray = x1.data.filter(function (element) {
+        return element.name == cryptoValue;
+    })
+
+    var market_cap = elementsArray[0].quote.USD.market_cap;
+    var price = elementsArray[0].quote.USD.price;
+
+    var market_cap_currency = '$' + market_cap.toFixed(2).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
+    var price_currency = '$' + price.toFixed(2).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
+
+    $('#cryptoCoin').text(cryptoValue);
+    $('#cryptoCoinMarketCap').text(market_cap_currency);
+    $('#cryptoCoinPrice').text(price_currency);
+}
 
 request(method, 'https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest?CMC_PRO_API_KEY=' + apikey.key)
     .then((r1) => {
@@ -40,20 +55,4 @@ function request(method, url) {
         xhr.onerror = reject;
         xhr.send();
     });
-}
-
-function doCalculus() {
-    var elementsArray = x1.data.filter(function (element) {
-        return element.name == cryptoValue;
-    })
-
-    var market_cap = elementsArray[0].quote.USD.market_cap;
-    var price = elementsArray[0].quote.USD.price;
-
-    var market_cap_currency = '$' + market_cap.toFixed(2).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
-    var price_currency = '$' + price.toFixed(2).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
-
-    $('#cryptoCoin').text(cryptoValue);
-    $('#cryptoCoinMarketCap').text(market_cap_currency);
-    $('#cryptoCoinPrice').text(price_currency);
 }
