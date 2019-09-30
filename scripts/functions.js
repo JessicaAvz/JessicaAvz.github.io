@@ -20,12 +20,10 @@ request('GET', 'https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/lat
         var x1 = JSON.parse(r1.target.responseText);
 
         var elementsArray = x1.data.filter(function (element) {
-            return element.name == cryptoValue;
+            return element.name == $('#selectedOption').text
         })
-
-        console.log(elementsArray)
         
-        console.log("Bitcoin Market Cap" + x1.data[0].quote.USD.market_cap);
+        console.log("Bitcoin Market Cap " + x1.data[0].quote.USD.market_cap);
 
     }).catch(err => {
         console.log(err);
