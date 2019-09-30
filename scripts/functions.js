@@ -2,14 +2,17 @@ var x1;
 
 $(document).ready(function () {
     $('.dropdown-menu a').click(function () {
-        var cryptoValue = $(this).text();
+        cryptoValue = $(this).text();
         $('#selectedOption').text(cryptoValue)
-        
-        x1.data.filter(function (element) {
-            return element.name == cryptoValue.text;
+        console.log(cryptoValue);
+
+        var elementsArray = x1.data.filter(function (element) {
+            return element.name == cryptoValue;
         })
-        
+
+        console.log(elementsArray)
     });
+
 
     $('#setNewMinutesButton').click(function () {
         var newMinutes = $('#newMinutesInput').val()
