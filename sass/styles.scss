@@ -1,0 +1,53 @@
+@import "_mixins.scss";
+@import "_variables.scss";
+
+html,
+body {
+    @include body();
+}
+
+
+.env-task-section-main {
+
+    .jumbotron {
+        text-align: center;
+        margin-top: 2rem;
+    }
+
+    .env-task-btn {
+        @include btn();
+
+        .fas {
+            margin-right: 5px;
+        }
+    }
+
+    .dropdown {
+        .dropdown-toggle {
+            @include dropdown();
+        }
+
+        .dropdown-menu {
+            .dropdown-item {
+                &:active {
+                    background-color: $primaryColor-dark !important;
+                    color: white !important;
+                }
+            }
+        }
+    }
+
+    .env-task-column {
+        border-radius: 10px;
+        padding: 2rem;
+        background-color: $backgroundColor;
+    }
+
+    .env-task-prompt {
+        font-size: 10pt;
+    }
+
+    .env-task-label-time {
+        font-weight: 700;
+    }
+}
