@@ -6,10 +6,7 @@ request('GET', 'https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/lat
     .then((r1) => {
         var x1 = JSON.parse(r1.target.responseText);
         console.log(x1.data.quote.BTC.market_cap);
-        console.log(x1.data.quote.ETH.market_cap);
-        console.log(x1.data.quote.XRP.market_cap);
-        console.log(x1.data.quote.LTC.market_cap);
-        console.log(x1.data.quote.BCH.market_cap);
+        console.log(x1.data.quote.BTC.price);
     }).catch(err => {
         console.log(err);
     })
