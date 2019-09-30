@@ -1,5 +1,17 @@
 var x1;
 
+var apikey = {
+    key: '919f2ec1-37e0-42d6-8e68-0625941de8ca'
+}
+
+var method = {
+    method: 'GET'
+}
+
+var url = {
+    url: 'https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest?CMC_PRO_API_KEY='
+}
+
 $(document).ready(function () {
     $('.dropdown-menu a').click(function () {
         var cryptoValue = $(this).text();
@@ -26,6 +38,10 @@ $(document).ready(function () {
         $('#cryptoCoinPrice').text(price_currency);
     });
 
+    $('#refreshManually').click(function () {
+        request();
+    })
+
 
     $('#setNewMinutesButton').click(function () {
         var newMinutes = $('#newMinutesInput').val()
@@ -33,11 +49,7 @@ $(document).ready(function () {
     });
 });
 
-var apikey = {
-    key: '919f2ec1-37e0-42d6-8e68-0625941de8ca'
-}
-
-request('GET', 'https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest?CMC_PRO_API_KEY=' + apikey.key)
+request(method, url + apikey.key)
     .then((r1) => {
         x1 = JSON.parse(r1.target.responseText);
     }).catch(err => {
