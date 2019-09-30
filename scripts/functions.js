@@ -3,7 +3,6 @@ $(document).ready(function () {
         var cryptoValue = $(this).text();
         $('#selectedOption').text(cryptoValue)
         console.log(cryptoValue);
-        request();
     });
 
     $('#setNewMinutesButton').click(function () {
@@ -21,8 +20,10 @@ request('GET', 'https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/lat
         var x1 = JSON.parse(r1.target.responseText);
 
         var elementsArray = x1.data.filter(function (element) {
-            return element.name == $('#selectedOption').text
+            return element.name == cryptoValue;
         })
+
+        console.log(elementsArray)
         
         console.log("Bitcoin Market Cap" + x1.data[0].quote.USD.market_cap);
 
