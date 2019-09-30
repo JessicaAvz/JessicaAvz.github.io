@@ -1,14 +1,13 @@
 var x1;
-
+var cryptoValue;
+var method = 'GET'
 var apikey = {
     key: '919f2ec1-37e0-42d6-8e68-0625941de8ca'
 }
 
-var method = 'GET';
-
 $(document).ready(function () {
     $('.dropdown-menu a').click(function () {
-        var cryptoValue = $(this).text();
+        cryptoValue = $(this).text();
         $('#selectedOption').text(cryptoValue)
         doCalculus();
     });
