@@ -11,12 +11,19 @@ $(document).ready(function () {
         })
 
         console.log(elementsArray);
-        console.log(cryptoValue + " Market cap: "+ elementsArray[0].quote.USD.market_cap);
-        console.log(cryptoValue + " Price: "+ elementsArray[0].quote.USD.price);
+        console.log(cryptoValue + " Market cap: " + elementsArray[0].quote.USD.market_cap);
+        console.log(cryptoValue + " Price: " + elementsArray[0].quote.USD.price);
+
+        var market_cap = elementsArray[0].quote.USD.market_cap;
+        var price = elementsArray[0].quote.USD.price;
+
+        var market_cap_currency = '$' + market_cap.toFixed(2).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
+        var price_currency = '$' + price.toFixed(2).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
+
 
         $('#cryptoCoin').text(cryptoValue);
-        $('#cryptoCoinMarketCap').text(elementsArray[0].quote.USD.market_cap);
-        $('#cryptoCoinPrice').text(elementsArray[0].quote.USD.price);
+        $('#cryptoCoinMarketCap').text(market_cap_currency);
+        $('#cryptoCoinPrice').text(price_currency);
     });
 
 
