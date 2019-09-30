@@ -11,8 +11,8 @@ $(document).ready(function () {
         })
 
         console.log(elementsArray);
-        console.log(cryptoValue + " Market cap: "+ elementsArray[cryptoValue].quote.USD.market_cap);
-        console.log(cryptoValue + " Price: "+ elementsArray[cryptoValue].quote.USD.price);
+        console.log(cryptoValue + " Market cap: "+ elementsArray[0].quote.USD.market_cap);
+        console.log(cryptoValue + " Price: "+ elementsArray[0].quote.USD.price);
 
     });
 
