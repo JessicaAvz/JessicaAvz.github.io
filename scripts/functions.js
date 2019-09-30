@@ -11,6 +11,9 @@ $(document).ready(function () {
         })
 
         console.log(elementsArray)
+        console.log(cryptoValue + " Market cap: "+ elementsArray.quote.USD.market_cap);
+        console.log(cryptoValue + " Price: "+ elementsArray.quote.USD.price);
+
     });
 
 
@@ -27,8 +30,6 @@ var apikey = {
 request('GET', 'https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest?CMC_PRO_API_KEY=' + apikey.key)
     .then((r1) => {
         x1 = JSON.parse(r1.target.responseText);
-        console.log("Bitcoin Market Cap " + x1.data[0].quote.USD.market_cap);
-
     }).catch(err => {
         console.log(err);
     })
