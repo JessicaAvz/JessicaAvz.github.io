@@ -5,8 +5,8 @@ var apikey = {
 request('GET', 'https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest?CMC_PRO_API_KEY=' + apikey.key)
     .then((r1) => {
         var x1 = JSON.parse(r1.target.responseText);
-        console.log(x1.data.quote.BTC.market_cap);
-        console.log(x1.data.quote.BTC.price);
+        console.log(x1)
+
     }).catch(err => {
         console.log(err);
     })
