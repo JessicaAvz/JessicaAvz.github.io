@@ -34,8 +34,6 @@ function updateData() {
             'X-CMC_PRO_API_KEY': 'bcfad2c4-b976-4ad0-8186-1ef89a369192',
         },
         success: function (result) {
-            console.log(result.data[cryptoValue])
-
             var ajax_marketcap = result.data[cryptoValue].quote.USD.market_cap;
             var ajax_price = result.data[cryptoValue].quote.USD.price;
 
