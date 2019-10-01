@@ -25,8 +25,8 @@ $(document).ready(function () {
                 var ajax_marketcap = result[0].market_cap_usd;
                 var ajax_price = result[0].price_usd;
 
-                var market_cap_currency = '$' + ajax_marketcap.toFixed(2).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
-                var price_currency = '$' + ajax_price.toFixed(2).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
+                var market_cap_currency = '$' + (+ajax_marketcap).toFixed(2).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
+                var price_currency = '$' + (+ajax_price).toFixed(2).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
 
                 $('#cryptoCoinMarketCap').text(market_cap_currency);
                 $('#cryptoCoinPrice').text(price_currency);
