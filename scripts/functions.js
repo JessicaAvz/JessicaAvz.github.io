@@ -29,7 +29,7 @@ $(document).ready(function () {
 function updateData() {
     $.ajax({
         type: "GET",
-        url: `https://pro-api.coinmarketcap.com/v1/cryptocurrency/quotes/latest?symbol=${cryptoValue}`,
+        url: `https://cors-anywhere.herokuapp.com/https://pro-api.coinmarketcap.com/v1/cryptocurrency/quotes/latest?symbol=${cryptoValue}`,
         headers: {
             'X-CMC_PRO_API_KEY': 'bcfad2c4-b976-4ad0-8186-1ef89a369192',
         },
@@ -52,4 +52,3 @@ function updateData() {
 
 updateData();
 t = setInterval(updateData, (newMinutes * 10000));
-
