@@ -1,5 +1,6 @@
 var x1;
 var cryptoValue;
+var elementsArray;
 var method = 'GET'
 var apikey = {
     key: '919f2ec1-37e0-42d6-8e68-0625941de8ca'
@@ -12,8 +13,25 @@ $(document).ready(function () {
         doCalculus();
     });
 
-    $('#refreshManually').click(function () {
-        doCalculus();
+    $('#refreshManually').click(function (e) {
+        e.preventDefault();
+        $.ajax({
+            type: "GET",
+            url: 'https://api.coinmarketcap.com/v1/ticker/',
+            data: {
+                name: cryptoValue,
+            },
+            success: function (result) {
+                var ajax_marketcap = result[0].market_cap_usd;
+                var ajax_price = result[0].price_usd;
+
+                $('#cryptoCoinMarketCap').text(ajax_marketcap);
+                $('#cryptoCoinPrice').text(ajax_price);
+            },
+            error: function (result) {
+                alert('error');
+            }
+        });
     })
 
     $('#setNewMinutesButton').click(function () {
@@ -22,9 +40,8 @@ $(document).ready(function () {
     });
 });
 
-
 function doCalculus() {
-    var elementsArray = x1.data.filter(function (element) {
+    elementsArray = x1.data.filter(function (element) {
         return element.name == cryptoValue;
     })
 
