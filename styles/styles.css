@@ -22,12 +22,8 @@ body {
 .env-task-section-main .env-task-btn .fas {
   margin-right: 5px;
 }
-.env-task-section-main .dropdown .dropdown-toggle {
+.env-task-section-main .dropdown-toggle {
   background-color: white;
-}
-.env-task-section-main .dropdown .dropdown-menu .dropdown-item:active {
-  background-color: #512DA8 !important;
-  color: white !important;
 }
 .env-task-section-main .env-task-column {
   border-radius: 10px;

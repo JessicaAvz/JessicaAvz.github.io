@@ -22,20 +22,10 @@ body {
         }
     }
 
-    .dropdown {
-        .dropdown-toggle {
-            @include dropdown();
-        }
-
-        .dropdown-menu {
-            .dropdown-item {
-                &:active {
-                    background-color: $primaryColor-dark !important;
-                    color: white !important;
-                }
-            }
-        }
+    .dropdown-toggle {
+        background-color: white;
     }
+
 
     .env-task-column {
         border-radius: 10px;
