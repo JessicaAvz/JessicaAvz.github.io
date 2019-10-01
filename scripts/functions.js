@@ -3,7 +3,7 @@ var cryptoValue = 'Bitcoin';
 var elementsArray;
 var method = 'GET'
 var apikey = {
-    key: '919f2ec1-37e0-42d6-8e68-0625941de8ca'
+    key: 'bcfad2c4-b976-4ad0-8186-1ef89a369192'
 }
 
 $(document).ready(function () {
